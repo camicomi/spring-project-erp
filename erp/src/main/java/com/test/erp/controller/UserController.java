@@ -33,4 +33,61 @@ public class UserController {
 
     }
 
+    @GetMapping(value = "/notice")
+    public String notice() {
+
+        // 회원만
+
+        return "notice";
+    }
+
+    @GetMapping(value = "/contact")
+    public String contact() {
+
+        return "contact";
+    }
+
+    @GetMapping(value = "/shop")
+    public String shop() {
+
+        // 쇼핑몰 관리
+
+        return "shop";
+    }
+
+    @GetMapping(value = "/item")
+    public String item() {
+
+        // 상품 관리
+
+        return "item";
+    }
+
+    @GetMapping(value = "/order")
+    public String order() {
+
+        // 주문 관리
+
+        return "order";
+    }
+
+    @GetMapping(value = "/delivery")
+    public String delivery() {
+
+        // 배송 관리
+
+        return "delivery";
+    }
+
+    @GetMapping(value = "/claim")
+    public String claim() {
+
+        // CS 관리
+
+        return "claim";
+    }
+
+
+
+
 }

@@ -24,7 +24,7 @@ public class SecurityConfig {
 
         // URI 허가
         http.authorizeRequests(auth -> auth
-                .requestMatchers("/", "/login", "/loginok").permitAll()
+                .requestMatchers("/**").permitAll()
                 .requestMatchers("/register", "/registerok").permitAll()
                 .requestMatchers("/assets/**").permitAll() // 정적 리소스 접근 허용
                 .anyRequest().authenticated()
@@ -40,6 +40,12 @@ public class SecurityConfig {
                 .loginProcessingUrl("/loginok")
                 .permitAll()
 
+        );
+
+        // 로그아웃
+        http.logout(auth -> auth
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/")
         );
 
         return http.build();
