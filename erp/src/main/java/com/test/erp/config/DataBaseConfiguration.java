@@ -9,17 +9,17 @@ import javax.sql.DataSource;
 //@Configuration
 public class DataBaseConfiguration {
 
-    @Bean
-    public DataSource getDataSource() {
-
-        return DataSourceBuilder.create()
-                .driverClassName("oracle.jdbc.OracleDriver")
-                .url("jdbc:oracle:thin:@localhost:1521:xe")
-                .username("springboot")
-                .password("java1234")
-                .build();
-
-    }
+//    @Bean
+//    public DataSource getDataSource() {
+//
+//        return DataSourceBuilder.create()
+//                .driverClassName("oracle.jdbc.OracleDriver")
+//                .url("jdbc:oracle:thin:@localhost:1521:xe")
+//                .username("springboot")
+//                .password("java1234")
+//                .build();
+//
+//    }
 
 
 
